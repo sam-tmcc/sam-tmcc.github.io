@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Management System Course</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            perspective: 1500px;
+        }
+        
+        .overview-card {
+            transform-style: preserve-3d;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            perspective: 2000px;
+        }
+        
+        .overview-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+        }
+        
+        .feature-card {
+            transform-style: preserve-3d;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateZ(0);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px) rotateY(2deg) translateZ(10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #4F46E5, #7C3AED, #4F46E5);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 3s linear infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+            100% { background-position: 0% center; }
+        }
+        
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .section-card {
+            transform-style: preserve-3d;
+            transition: all 0.3s ease;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .lottie-container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lottie-icon {
+            width: 60px;
+            height: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .lottie-icon {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 hero-pattern min-h-screen">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-7xl">
+        <header class="text-center mb-12 md:mb-16 py-4">
+            <div class="lottie-container mb-8">
+                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_hxart9lz.json" 
+                    background="transparent" 
+                    speed="1" 
+                    style="width: 350px; height: 350px;" 
+                    loop 
+                    autoplay>
+                </lottie-player>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-8 leading-relaxed tracking-normal">Learning Management System Course</h1>
+            <p class="text-lg md:text-xl text-gray-600 mt-6 leading-relaxed">A comprehensive 10-week web development journey</p>
+        </header>
+
+        <main class="space-y-8 md:space-y-12">
+            <!-- Course Overview -->
+            <section class="bg-white rounded-2xl p-8 overview-card">
+                <div class="transform-gpu transition-all duration-500">
+                    <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6">Course Overview</h2>
+                    <p class="text-gray-700 mb-8 text-lg leading-relaxed">Master the art of building a modern web application with authentication and management systems. Join us on this transformative journey from basics to deployment.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="feature-card bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
+                            <div class="flex items-center mb-4">
+                                <div class="lottie-container lottie-icon">
+                                    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_w51pcehl.json" 
+                                        background="transparent" 
+                                        speed="1" 
+                                        loop 
+                                        autoplay>
+                                    </lottie-player>
+                                </div>
+                                <h3 class="font-bold text-xl text-blue-800 ml-3">Duration</h3>
+                            </div>
+                            <p class="text-blue-600 text-lg">10 Intensive Weeks</p>
+                        </div>
+                        <div class="feature-card bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
+                            <div class="flex items-center mb-4">
+                                <div class="lottie-container lottie-icon">
+                                    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_q7hiluze.json" 
+                                        background="transparent" 
+                                        speed="1" 
+                                        loop 
+                                        autoplay>
+                                    </lottie-player>
+                                </div>
+                                <h3 class="font-bold text-xl text-green-800 ml-3">Sessions</h3>
+                            </div>
+                            <p class="text-green-600 text-lg">30 Interactive Lessons</p>
+                        </div>
+                        <div class="feature-card bg-gradient-to-br from-purple-50 to-fuchsia-50 p-6 rounded-xl">
+                            <div class="flex items-center mb-4">
+                                <div class="lottie-container lottie-icon">
+                                    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_qp1q7mct.json" 
+                                        background="transparent" 
+                                        speed="1" 
+                                        loop 
+                                        autoplay>
+                                    </lottie-player>
+                                </div>
+                                <h3 class="font-bold text-xl text-purple-800 ml-3">Project</h3>
+                            </div>
+                            <p class="text-purple-600 text-lg">Complete LMS System</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Course Structure -->
+            <section class="bg-white rounded-2xl p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-indigo-600 mb-8">Course Structure</h2>
+                <div class="space-y-6">
+                    <!-- Weeks 1-2 -->
+                    <div class="section-card bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-6">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center mb-4">
+                            <div class="lottie-container" style="width: 80px; height: 80px;">
+                                <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_szviypry.json" 
+                                    background="transparent" 
+                                    speed="1" 
+                                    loop 
+                                    autoplay>
+                                </lottie-player>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-blue-800 mt-4 sm:mt-0 sm:ml-4">Weeks 1-2: Foundations & Setup</h3>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                            <li>Development Environment Setup</li>
+                            <li>HTML5/Tailwind CSS Fundamentals</li>
+                            <li>JavaScript Essentials</li>
+                            <li>Git Workflow & Best Practices</li>
+                            <li>Database Basics (SQL Server)</li>
+                            <li>API Fundamentals & REST Principles</li>
+                        </ul>
+                    </div>
+
+                    <!-- Weeks 3-4 -->
+                    <div class="section-card bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-6">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center mb-4">
+                            <div class="lottie-container" style="width: 80px; height: 80px;">
+                                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_xvrofzfk.json" 
+                                    background="transparent" 
+                                    speed="1" 
+                                    loop 
+                                    autoplay>
+                                </lottie-player>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-green-800 mt-4 sm:mt-0 sm:ml-4">Weeks 3-4: Authentication System</h3>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                            <li>Database Schema Design for Users</li>
+                            <li>Frontend Login/Signup Forms</li>
+                            <li>Backend User Authentication APIs</li>
+                            <li>Password Hashing & Security</li>
+                            <li>JWT Implementation</li>
+                            <li>Error Handling & Validation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Weeks 5-6 -->
+                    <div class="section-card bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-xl p-6">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center mb-4">
+                            <div class="lottie-container" style="width: 80px; height: 80px;">
+                                <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_m64r7cwa.json" 
+                                    background="transparent" 
+                                    speed="1" 
+                                    loop 
+                                    autoplay>
+                                </lottie-player>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-yellow-800 mt-4 sm:mt-0 sm:ml-4">Weeks 5-6: Attendance System</h3>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                            <li>Attendance Database Schema</li>
+                            <li>Frontend Attendance Interface</li>
+                            <li>Backend Attendance APIs</li>
+                            <li>Date/Time Handling</li>
+                            <li>Reports & Analytics</li>
+                            <li>Data Visualization</li>
+                        </ul>
+                    </div>
+
+                    <!-- Weeks 7-8 -->
+                    <div class="section-card bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl p-6">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center mb-4">
+                            <div class="lottie-container" style="width: 80px; height: 80px;">
+                                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_5tl1xxnz.json" 
+                                    background="transparent" 
+                                    speed="1" 
+                                    loop 
+                                    autoplay>
+                                </lottie-player>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-purple-800 mt-4 sm:mt-0 sm:ml-4">Weeks 7-8: Assignment System</h3>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                            <li>Assignment Database Design</li>
+                            <li>File Upload/Download Functionality</li>
+                            <li>Assignment Submission System</li>
+                            <li>Notification System</li>
+                            <li>Progress Tracking</li>
+                            <li>Teacher/Student Interfaces</li>
+                        </ul>
+                    </div>
+
+                    <!-- Weeks 9-10 -->
+                    <div class="section-card bg-gradient-to-r from-red-50 to-red-100 rounded-xl p-6">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center mb-4">
+                            <div class="lottie-container" style="width: 80px; height: 80px;">
+                                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_hxart9lz.json" 
+                                    background="transparent" 
+                                    speed="1" 
+                                    loop 
+                                    autoplay>
+                                </lottie-player>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-red-800 mt-4 sm:mt-0 sm:ml-4">Weeks 9-10: Integration & Testing</h3>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                            <li>System Integration</li>
+                            <li>Testing Strategies</li>
+                            <li>Performance Optimization</li>
+                            <li>Deployment Process</li>
+                            <li>Documentation</li>
+                            <li>Final Project Presentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-16 text-gray-600">
+            <div class="mb-4">
+                <div class="lottie-container mx-auto" style="width: 100px; height: 100px;">
+                    <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_WdTEui.json" 
+                        background="transparent" 
+                        speed="1" 
+                        loop 
+                        autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+            <p class="text-lg">Coded with ♥ by @TheCodingSam</p>
+        </footer>
+    </div>
+</body>
+</html>
